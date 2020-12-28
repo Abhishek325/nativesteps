@@ -17,7 +17,7 @@ resources:
     type: GitRepo
     configuration:
       path: abhishek325/nativesteps
-      gitProvider: abhishek
+      gitProvider: abhishek_github
       branches:
         include: docker
         
