@@ -1,28 +1,28 @@
 resources:
-  - name: docker_Build_vijay
+  - name: docker_Build_abhishek
     type: BuildInfo
     configuration:
       sourceArtifactory: art_v
       buildNumber: 1
       buildName: dockertest
       
-  - name: docker_build_promote_vijay
+  - name: docker_build_promote_abhishek
     type: BuildInfo
     configuration:
       sourceArtifactory: art_v
       buildNumber: 1
       buildName: dockertest
       
-  - name: dockerbuild_vijay
+  - name: dockerbuild_abhishek
     type: GitRepo
     configuration:
-      path: vijayreddy1991/nativesteps
-      gitProvider: vijay
+      path: abhishek325/nativesteps
+      gitProvider: abhishek
       branches:
         include: docker
         
 pipelines:
-  - name: docker_vijay
+  - name: docker_abhishek
     steps:
       - name: dockerBuild
         type: DockerBuild
@@ -32,7 +32,7 @@ pipelines:
 #           dockerImageName: 'c8testrt.jfrog-pipelines.com/pipelines/api/docker-local/pipelines'
 #           dockerImageName: 'rhel8rt.jfrog-pipelines.com/docker-local/pipelines'
 #           dockerImageName: 'pipelines.westus.cloudapp.azure.com:8082/docker-local/pipelines'
-          dockerImageName: 'releasetest1.jfrog.info/docker-local/pipelines'
+          dockerImageName: 'pipe-master.jfrog.info/docker-local/pipelines'
 #           dockerImageName: 'u20.jfrog-pipelines.com/docker-local/pipelines'
           dockerImageTag: '${run_number}'
           integrations:
@@ -73,7 +73,8 @@ pipelines:
 #           integrations:
 #             - name: art_v
 #           inputResources:
-#             - name: dockerbuild_vijay
+#             - name: dockerbuild_
+
 #           outputResources:
 #             - name: docker_build_promote_vijay
             
