@@ -38,7 +38,7 @@ pipelines:
           integrations:
             - name: art_v
           inputResources:
-            - name: dockerbuild_vijay
+            - name: dockerbuild_abhishek
         execution:
           onStart:
             - echo "hi"
